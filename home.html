@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <title>Slate Technical Documentation Page</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav id="nav-header">
+                    <div class="flex">
+                        <div class="left-nav">
+                            <h2>slate</h2>
+                        </div>
+                        <div class="right-nav">
+                            <ul>
+                                <li><a href="./home.html">Home</a></li>
+                                <li><a href="./pricing.html">Pricing</a></li>
+                                <li><a href="./signin.html">Sign In</a></li>
+                                <li><button><a href="./signup.html">Try for free</a></li></button></li>
+                            </ul> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="main-doc">
+            <div class="container">
+                <div class="flex">
+                    <div class="left-main-column">
+                        <nav id="navbar">
+                            <header>
+                                <h3>Table of Contents</h3>
+                            </header>
+                            <ul>
+                                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                                <li><a href="#What_you_should_know">What you should know</a></li>
+                                <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
+                                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                                <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+                                <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="right-main-column nav-panel">
+                        <div class="main-header">
+                            <div>
+                                <img src="./Images/download.png" alt="guide-template" width="760" height="400">
+                            </div>
+                            <div>
+                                <h1>A Complete Guide to JavaScript</h1>
+                            </div>
+                        </div>
+                        <section class="main-section" id="Introduction">
+                            <header>
+                                <h2>Introduction</h2>
+                            </header>
+                            <p>
+                                JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+                            </p>
+
+                            <p>
+                                JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
+                            </p>
+                            <ol>
+                                <li>
+                                    Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+                                </li>
+                                <br>
+                                <li>
+                                    Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
+                                </li>
+                            </ol>
+                        </section>
+                        <br>
+                        <section class="main-section" id="What_you_should_know">
+                            <header>
+                                <h2>What you should know</h2>
+                            </header>
+                            <p>
+                                This guide assumes you have the following basic background:
+                            </p>
+                            <ol>
+                                <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                                <br>
+                                <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                                <br>
+                                <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+                            </ol>
+                        </section>
+                        <br>
+                        <section class="main-section" id="Hello_world">
+                            <header>
+                                <h2>Hello world</h2>
+                            </header>
+                            <p>
+                                To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
+                            </p>
+                            <code>
+                                function greetMe(yourName) { alert("Hello " + yourName); } <br>
+                                greetMe("World");
+                            </code>
+                        </section>
+                        <br>
+                        <section class="main-section" id="Variables">
+                            <header>
+                                <h2>Variables</h2>
+                            </header>
+                            <p>
+                                You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+                            </p>
+
+                            <p>
+                                A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
+                            </p>
+                            
+                            <p>
+                                You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.
+                            </p>
+                        </section>
+                        <br>
+                        <section class="main-section" id="Declaring_variables">
+                            <header>
+                                <h2>Declaring variables</h2>
+                            </header>
+                            <p>
+                                You can declare a variable in three ways:
+                            </p>
+
+                            <p>
+                                With the keyword var. For example,
+                            </p>
+                            <code>
+                                var x = 42.
+                            </code>
+
+                            <p>
+                                This syntax can be used to declare both local and global variables.
+                            </p>
+
+                            <p>
+                                By simply assigning it a value. For example,
+                            </p>
+                            <code>
+                                x = 42.
+                            </code>
+
+                            <p>
+                                This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.
+                            </p>
+
+                            <p>
+                                With the keyword let. For example,
+                            </p>
+                            <code>
+                                let y = 13.
+                            </code>
+
+                            <p>
+                                This syntax can be used to declare a block scope local variable. See Variable scope below.
+                            </p>
+                        </section>
+                        <br>
+                        <section class="main-section"id="Variable_scope">
+                            <header >
+                                <h2>Variable scope</h2>
+                            </header>
+                            <p>
+                                When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+                            </p>
+
+                            <p>
+                                JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.
+                            </p>
+                            <code>
+                                if (true) { var x = 5; } console.log(x); // 5
+                            </code>
+
+                            <p>
+                                This behavior changes, when using the let declaration introduced in ECMAScript 2015.
+                            </p>
+                            <code>
+                                if (true) { let y = 5; } console.log(y); // ReferenceError: y is not <br>
+                                defined
+                            </code>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <hr>
+        <div class="top-footer">
+            <div class="footer-left">
+                <div class="left-nav">
+                    <h2>slate</h2>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Find us on Twitter</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Customers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="flex">
+                <div class="bottom-footer-legal">
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">User terms</a></li>
+                        <li><a href="#">Customer terms</a></li>
+                    </ul> 
+                </div>
+                <div class="bottom-footer-apps">
+                    <ul>
+                        <li><a href="#"><img src="Icons/447-appleinc.svg" alt="apple-logo"></a></li>
+                        <li><a href="#"><img src="Icons/451-windows8.svg" alt="windows-logo"></a></li>
+                    </ul>
+                </div>
+                <div class="bottom-footer-copyrights">
+                    <p>&copy; 2021 Slate. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
